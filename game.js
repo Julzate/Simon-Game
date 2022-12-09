@@ -48,13 +48,8 @@ function nextSequence(){
     $("h1").html("Level " + level)  
     
     /* Easy Mode */
-    /* for (let i = 0; i < gamePattern.length; i++){
-        setTimeout(function(){
-            playSound(gamePattern[i])    
-            animatePress(gamePattern[i])
-        }, 1000 * i)
-    }
-     */
+  
+    
 }
 
 $(".btn").click( e => {
@@ -66,6 +61,17 @@ $(".btn").click( e => {
     animatePress(userChosenColor)
 
     checkAnswer(userClickedPattern.length-1)
+})
+
+/* help button */
+
+$(".help-btn").click(function(){
+    for (let i = 0; i < gamePattern.length; i++){
+        setTimeout(function(){
+            playSound(gamePattern[i])    
+            animatePress(gamePattern[i])
+        }, 400 * i)
+    }
 })
 
 function checkAnswer(currentLevel){
@@ -91,7 +97,7 @@ function checkAnswer(currentLevel){
 }
 
 function startOver(){
-    level= 0,
+    level= 0;
     gamePattern = [];
     gameStarted = false;
 }
