@@ -39,9 +39,9 @@ function nextSequence(){
 
     gamePattern.push(randomChosenColor)
     
-   /*  playSound(randomChosenColor)
+    playSound(randomChosenColor)
     
-    animatePress(randomChosenColor) */
+    animatePress(randomChosenColor)
 
     level++;
 
